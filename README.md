@@ -64,7 +64,7 @@ source venv/bin/activate
 then run the following command to install the dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.in
 ```
 
 ## Testing
