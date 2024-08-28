@@ -32,9 +32,6 @@ print(calc.multiply(10, 5))  # 50
 print(calc.divide(10, 2))  # 5.0
 print(calc.power(2, 3))  # 8.0
 print(calc.calculate_circle_area(5))  # 78.53981633974483
-calc.save_to_file('history.txt')
-calc.clear_history()
-print(calc.load_from_file('history.txt')) 
 ```
 
 You can test this example by running the following command:
@@ -73,6 +70,12 @@ To run the example usage file, execute the following command:
 
 ```bash
 python3 example.py
+```
+
+To run the tests, execute the following command:
+
+```bash
+python3 -m unittest tests/test_*.py
 ```
 
 ## Contribution
