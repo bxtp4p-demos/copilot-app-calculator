@@ -1,0 +1,7 @@
+# This file lists the dependencies required for the project.
+
+# Development packages
+pytest==8.3.2
+coverage==7.6.1
+flake8==3.9.2
+pip-tools==7.4.1
