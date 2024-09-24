@@ -52,4 +52,62 @@ class Calculator:
 
     def clear_history(self):
         self.history = []
+
+def main():
+    calc = Calculator(0)
+    while True:
+        print("\nOptions:")
+        print("1. Add")
+        print("2. Subtract")
+        print("3. Multiply")
+        print("4. Divide")
+        print("5. Power")
+        print("6. Calculate Circle Area")
+        print("7. Save History to File")
+        print("8. Load History from File")
+        print("9. Clear History")
+        print("10. Exit")
         
+        choice = input("Choose an option: ")
+        
+        if choice == '1':
+            x = float(input("Enter first number: "))
+            y = float(input("Enter second number: "))
+            print(f"Result: {calc.add(x, y)}")
+        elif choice == '2':
+            x = float(input("Enter first number: "))
+            y = float(input("Enter second number: "))
+            print(f"Result: {calc.subtract(x, y)}")
+        elif choice == '3':
+            x = float(input("Enter first number: "))
+            y = float(input("Enter second number: "))
+            print(f"Result: {calc.multiply(x, y)}")
+        elif choice == '4':
+            x = float(input("Enter first number: "))
+            y = float(input("Enter second number: "))
+            print(f"Result: {calc.divide(x, y)}")
+        elif choice == '5':
+            x = float(input("Enter base number: "))
+            y = float(input("Enter exponent: "))
+            print(f"Result: {calc.power(x, y)}")
+        elif choice == '6':
+            radius = float(input("Enter radius: "))
+            print(f"Result: {calc.calculate_circle_area(radius)}")
+        elif choice == '7':
+            filename = input("Enter filename to save history: ")
+            calc.save_to_file(filename)
+            print("History saved.")
+        elif choice == '8':
+            filename = input("Enter filename to load history: ")
+            print("History loaded:")
+            print(calc.load_from_file(filename))
+        elif choice == '9':
+            calc.clear_history()
+            print("History cleared.")
+        elif choice == '10':
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
